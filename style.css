@@ -1,0 +1,46 @@
+:root{
+  --base:red;
+  --spacing :10px;
+  --blur:0px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background-color:#193549;
+  color:white;
+  text-align:center;
+}
+
+.hl{
+  color:var(--base);
+}
+
+#bordercontrols{
+ display:flex;
+ gap:20px;
+ margin: 0 auto 50px; 
+ align-items:center;
+ justify-content:center; 
+ }
+
+
+
+label{
+  margin-left:10px;
+}
+
+#squarebelow{
+  margin:0 auto;
+  width:540px;
+  height:446px;
+  background-color:var(--base);
+  position:relative;
+  z-index:0;
+  padding:var(--spacing);
+ }
+
+#squarebelow img{
+  filter: blur(var(--blur));
+}
+

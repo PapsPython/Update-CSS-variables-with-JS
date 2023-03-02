@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Update CSS variables with JS</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+ <header> 
+    <h1>
+      Update CSS variables with <span class="hl">JS</span>
+    </h1>
+ </header>
+<section id="bordercontrols">
+  <label name="spacing "><h2>Spacing:</h2></label>
+  <input type="range" id="space" name="spacing"  min="10" max="100" data-sizing="px" value="10">
+  <label name="blur"><h2>Blur:</h2></label>
+  <input type="range" name="blur" id="blur" min="0" max="30" data-sizing="px" value = "0">
+  <label name="base"><h2>Base Color: </h2></label>
+  <input type="color" name="base" id="base" value="red">
+</section>
+
+  <section>
+    <p id="squarebelow">
+      <img src="image-header-desktop.jpg" alt="imageofwomen">
+    </p>
+  </section>
+  
+  <script>
+ const inputs = document.querySelectorAll("#bordercontrols input")
+    
+   function edits(){
+     const suffix = this.dataset.sizing || ""
+    document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix)
+     }
+
+ inputs.forEach(input => input.addEventListener("change",edits))
+ inputs.forEach(input => input.addEventListener("mousemove",edits))    
+  </script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>

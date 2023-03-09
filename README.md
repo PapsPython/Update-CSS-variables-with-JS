@@ -11,7 +11,7 @@ iii) Change the style on the elements
 New Vocabulary Encountered 
 i)using root css variables to store value eg: --blur:10px
 ii) <input type="range"> <input type="color>
-iii) "this" in a function scope is a synonym to "e.target"
+iii) "this" in a function scope is a synonym to "e.target" provided the event victim is specified before the eventlistener. 
 iv) change and mousemove eventlistener
 v)  document.documentElement 
 vi).setProperty() instead of style.padding/style.backgroundColor. I think setProperty offers flexibility to write drycode. variable.style.padding/backgroundColor would have been repetitive.
